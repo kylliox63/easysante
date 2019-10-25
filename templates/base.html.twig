@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<html lang="{{ app.request.locale }}">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}Welcome!{% endblock %}</title>
+	{% block stylesheets %}{% endblock %}
+</head>
+<body>
+{% block body %}{% endblock %}
+<footer>
+<p>Vu le {{ 'now'|date('d/m/Y') }}</p>
+<p>Responsable du site : {{ webmaster }}.</p>
+</footer>
+{% block javascripts %}{% endblock %}
+</body>
 </html>
