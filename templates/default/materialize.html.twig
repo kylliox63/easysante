@@ -4,25 +4,23 @@
 
 {% block stylesheets %}
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-	<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+	<link type="text/css" rel="stylesheet" href="{{ asset("css/materialize.min.css") }}" media="screen,projection" />
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 {% endblock %}
 
 
 {% block body %}
-<div class="example-wrapper">
-<h1>Hello {{ controller_name }}! ✅</h1>
-<h2>{{ app.environment|upper }} Your lucky number is {{ number|upper }}</h2>
-
+<h1>Hello {{ controller_name }}!</h1>
+<h2 class="blue">{{ app.environment|upper }} Your lucky number is {{ number|upper }}</h2>
 This friendly message is coming from:
 <ul>
 <li>Your controller at <code><a href="{{ 'src/Controller/DefaultController.php'|file_link(0) }}">src/Controller/DefaultController.php</a></code></li>
 <li>Your template at <code><a href="{{ 'templates/default/index.html.twig'|file_link(0) }}">templates/default/index.html.twig</a></code></li>
 </ul>
-</div>
 {% endblock %}
 
 {% block javascripts %}
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="{{ asset("js/materialize.min.js") }}"></script>
 {% endblock %}

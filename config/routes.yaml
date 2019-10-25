@@ -1,6 +1,6 @@
 index:
    path: /1
-   controller: App\Controller\DefaultController::index
+   controller: App\Controller\DefaultController::indexm
    methods: GET
    condition: "request.headers.get('User-Agent') matches '/safari/i'"
    locale: fr

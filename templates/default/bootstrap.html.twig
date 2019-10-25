@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DefaultController!{% endblock %}
+
+{% stylesheets
+    'css/bootstrap.min.css'
+    'css/main.css'
+    filter='cssrewrite' output='css/compiled/app.css' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+
+{% block body %}
+<h1>Hello {{ controller_name }}!</h1>
+<h2>{{ app.environment|upper }} Your lucky number is {{ number|upper }}</h2>
+This friendly message is coming from:
+<ul>
+<li>Your controller at <code><a href="{{ 'src/Controller/DefaultController.php'|file_link(0) }}">src/Controller/DefaultController.php</a></code></li>
+<li>Your template at <code><a href="{{ 'templates/default/index.html.twig'|file_link(0) }}">templates/default/index.html.twig</a></code></li>
+</ul>
+{% endblock %}
+
+{% javascripts
+    'js/jquery.min.js'
+    'js/bootstrap.min.js'
+    output='js/compiled/app.js' %}
+    <script src="{{ asset_url }}"></script>
+{% endjavascripts %}
