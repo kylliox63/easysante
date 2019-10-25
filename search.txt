@@ -1,0 +1,26 @@
+/*
+Apache config : <code>composer require symfony/apache-pack</code>
+<code>
+DocumentRoot /var/www/project/public
+<Directory /var/www/project/public>
+    AllowOverride None
+    Order Allow,Deny
+    Allow from All
+
+    <IfModule mod_rewrite.c>
+        Options -MultiViews
+        RewriteEngine On
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteRule ^(.*)$ index.php [QSA,L]
+    </IfModule>
+</Directory>
+
+SetEnv APP_ENV prod
+SetEnv APP_DEBUG 0
+</code>
+
+Créer database :
+	php bin/console doctrine:database:create
+	php bin/console doctrine:schema:update --force
+*/
+https://makina-corpus.com/blog/metier/2018/comment-demarrer-un-projet-symfony-4-en-5-minutes

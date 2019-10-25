@@ -1,5 +1,5 @@
-assetic:
-    node: /usr/bin/nodejs
-    filters:
-        uglifyjs2:
-            bin: "~/tmp/easysante/app/Resources/node_modules/.bin/uglifyjs"
+# assetic:
+#     assets:
+#         jquery:
+#             inputs:
+#                 - %kernel.root_dir%/../vendor/components/jquery/jquery.js

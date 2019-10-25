@@ -16,3 +16,5 @@ framework:
         log: true
 
     # ide: 'sublime_text://open?url=file://%%f&line=%%l'
+    # assets:
+    #     base_path: '/assets'

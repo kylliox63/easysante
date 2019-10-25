@@ -10,8 +10,8 @@ class DefaultController extends AbstractController
     {
     	$num = random_int(0, 100);
         return $this->render('default/bootstrap.html.twig', [
-        		'number' => $num,
-        		'page_title' => 'Welcome !'.$num.'abc',
+        	'number' => $num,
+        	'page_title' => 'Welcome !'.$num.'abc',
             'controller_name' => 'DefaultController',
         ]);
     }
@@ -20,8 +20,8 @@ class DefaultController extends AbstractController
     {
         $num = random_int(0, 100);
         return $this->render('default/materialize.html.twig', [
-                'number' => $num,
-                'page_title' => 'Welcome !'.$num.'abc',
+            'number' => $num,
+            'page_title' => 'Welcome !'.$num.'abc',
             'controller_name' => 'DefaultController',
         ]);
     }

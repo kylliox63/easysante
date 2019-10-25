@@ -2,12 +2,9 @@
 
 {% block title %}Hello DefaultController!{% endblock %}
 
-{% stylesheets
-    'css/bootstrap.min.css'
-    'css/main.css'
-    filter='cssrewrite' output='css/compiled/app.css' %}
-    <link rel="stylesheet" href="{{ asset_url }}" />
-{% endstylesheets %}
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
+{% endblock %}
 
 {% block body %}
 <h1>Hello {{ controller_name }}!</h1>
@@ -19,9 +16,4 @@ This friendly message is coming from:
 </ul>
 {% endblock %}
 
-{% javascripts
-    'js/jquery.min.js'
-    'js/bootstrap.min.js'
-    output='js/compiled/app.js' %}
-    <script src="{{ asset_url }}"></script>
-{% endjavascripts %}
+
